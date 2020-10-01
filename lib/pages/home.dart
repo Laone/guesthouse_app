@@ -33,7 +33,13 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
         ),
         centerTitle: true,
       ),
-      body: ,
+      body: Container(
+          child: FlatButton.icon(
+              onPressed: () {
+                Navigator.pushNamed(context, '/calendar');
+              },
+              icon: Icon(Icons.calendar_today),
+              label: Text('go to calendar'))),
     );
   }
 }
